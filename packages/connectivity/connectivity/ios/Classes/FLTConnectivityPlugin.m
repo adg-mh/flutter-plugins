@@ -61,26 +61,6 @@
   _eventSink([self statusFromReachability:curReach]);
 }
 
-- (NSString*)convertCLAuthorizationStatusToString:(CLAuthorizationStatus)status {
-  switch (status) {
-    case kCLAuthorizationStatusNotDetermined: {
-      return @"notDetermined";
-    }
-    case kCLAuthorizationStatusRestricted: {
-      return @"restricted";
-    }
-    case kCLAuthorizationStatusDenied: {
-      return @"denied";
-    }
-    case kCLAuthorizationStatusAuthorizedAlways: {
-      return @"authorizedAlways";
-    }
-    case kCLAuthorizationStatusAuthorizedWhenInUse: {
-      return @"authorizedWhenInUse";
-    }
-    default: { return @"unknown"; }
-  }
-}
 
 #pragma mark FlutterStreamHandler impl
 
