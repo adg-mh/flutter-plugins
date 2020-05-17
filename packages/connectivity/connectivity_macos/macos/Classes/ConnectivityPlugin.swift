@@ -46,12 +46,6 @@ public class ConnectivityPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
     switch call.method {
     case "check":
       result(statusFromReachability(reachability: Reachability.forInternetConnection()))
-    case "wifiName":
-      result(cwinterface?.ssid())
-    case "wifiBSSID":
-      result(cwinterface?.bssid())
-    case "wifiIPAddress":
-      result(getWifiIP())
     default:
       result(FlutterMethodNotImplemented)
     }
